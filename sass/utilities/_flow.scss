@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, $size-3);
+  @include mq(medium) {
+    --flow-spacer: #{$size-6};
+  }
+}
